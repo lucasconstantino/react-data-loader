@@ -27,17 +27,17 @@ I've lately being coding most of my projects using the Apollo stack. As with any
 ```js
 import { withDataLoader } from 'react-data-loader'
 
-const MyDataLoaderComponent = ({ myData }) => (
+const MyDataLoaderComponent = ({ someProp }) => (
   <div>
-    { JSON.stringify(myData) }
-    <button onClick={ myData.load } disabled={ myData.loading }>Load!</button>
+    { JSON.stringify(someProp.data) }
+    <button onClick={ someProp.load } disabled={ someProp.loading }>Load!</button>
   </div>
 )
 
 // Using Fetch API.
 const loader = props => e => fetch('/api/data.json').then(res => res.json())
 
-export default withDataLoader('myData', loader)(MyDataLoaderComponent)
+export default withDataLoader('someProp', loader)(MyDataLoaderComponent)
 ```
 
 ## License
