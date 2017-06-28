@@ -42,7 +42,7 @@ requests | `Number` | `0` | The amount of times data was fetched using this load
 promise | `Promise` | `null` | The currently running data fetching promise.
 load | `Function` | | The data fetch dispatcher function. Can be called with whatever arguments your `loader` accepts.
 
-The `loader` argument of `withDataLoader` is where the fun happens. It follows the same specification as the [`withHandlers` from Recompose](https://github.com/acdlite/recompose/blob/master/docs/API.md#withhandlers) lib: it must be a Higher-Order Function which will receive `props` and must return a function responsible for fetching data.
+The `loader` argument of `withDataLoader` is where the fun happens. It follows a similar specification as that of the [`withHandlers` from Recompose](https://github.com/acdlite/recompose/blob/master/docs/API.md#withhandlers) lib: it must be a Higher-Order Function which will receive `props` and must return a function responsible for fetching data.
 
 ### Simple as can
 
