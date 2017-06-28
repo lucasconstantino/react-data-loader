@@ -22,6 +22,28 @@ I've lately being coding most of my projects using the Apollo stack. As with any
 
 ## Usage
 
+This lib provides a single Higher-Order Component called `withDataLoader` with the following signature:
+
+```js
+withDataLoader(
+  propName: string,
+  loader: (props: Object) => Function
+): HigherOrderComponent
+```
+
+This HoC will inject an object on the property defined by `propName`. The object will have these keys:
+
+key  | type | default | description
+-----|------|---------|------------
+data | `any` | `undefined` | The resulting data. Can be anything you need.
+loading | `Boolean` | `false` | Whether or not the loader is currently fetching data.
+error | `any` | `null` | The failure result. Can be anything you need (most commonly an `Error` instance).
+requests | `Number` | `0` | The amount of times data was fetched using this loader.
+promise | `Promise` | `null` | The currently running data fetching promise.
+load | `Function` | | The data fetch dispatcher function. Can be called with whatever arguments your `loader` accepts.
+
+The `loader` argument of `withDataLoader` is where the fun happens. It follows the same specification as the [`withHandlers` from Recompose](https://github.com/acdlite/recompose/blob/master/docs/API.md#withhandlers) lib: it must be a Higher-Order Function which will receive `props` and must return a function responsible for fetching data.
+
 ### Simple as can
 
 ```js
