@@ -1,4 +1,4 @@
-# React Data Loader [![Build Status](https://travis-ci.org/lucasconstantino/react-data-loader.svg?branch=master)](https://travis-ci.org/lucasconstantino/react-data-loader)
+# React Data Loader [![Build Status](https://travis-ci.org/lucasconstantino/react-data-loader.svg?branch=master)](https://travis-ci.org/lucasconstantino/react-data-loader) [![Greenkeeper badge](https://badges.greenkeeper.io/lucasconstantino/react-data-loader.svg)](https://greenkeeper.io/)
 
 > Dead simple data loader helper for React
 
